@@ -13,7 +13,7 @@ const projects = [
     github: "https://github.com/orafaelmatos/url-shortener",
     deploy: "https://url-shortener-byxq.onrender.com/docs",
   },
-    {
+  {
     id: 2,
     title: "Mini Crontab",
     description:
@@ -23,13 +23,13 @@ const projects = [
     github: "https://github.com/orafaelmatos/async-cron",
     deploy: "https://url-shortener-byxq.onrender.com/docs",
   },
-      {
+  {
     id: 3,
     title: "Backend plataforma de educação",
     description:
       "Um backend Django completo para uma plataforma educacional que permite aos professores gerenciar cursos, materiais e aulas ao vivo. O projeto segue os princípios SOLID e as melhores práticas de desenvolvimento modernas.",
     image: "images/education-plataform.jpg",
-    tech: ["Python", "Django", "DRF", "JWT","PostgreSQL", "Docker", "Swagger/OpenAPI"],
+    tech: ["Python", "Django", "DRF", "JWT", "PostgreSQL", "Docker", "Swagger/OpenAPI"],
     github: "https://github.com/orafaelmatos/learn-hub",
     deploy: "https://url-shortener-byxq.onrender.com/docs",
   },
@@ -46,7 +46,8 @@ const projects = [
   {
     id: 5,
     title: "Analisador de Logs",
-    description: "Projeto para gerenciamento de logs: os usuários podem adicionar logs, visualizar o histórico, ver métricas e filtrar por serviço.",
+    description:
+      "Projeto para gerenciamento de logs: os usuários podem adicionar logs, visualizar o histórico, ver métricas e filtrar por serviço.",
     image: "images/crm-system.jpg",
     tech: ["Python", "FastAPI", "Celery", "SQLAlchemy", "MongoDB", "React", "Typescript", "Shadcn-ui", "Docker"],
     github: "https://github.com/orafaelmatos/logs-analytics",

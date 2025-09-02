@@ -1,0 +1,94 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* Dark Portfolio Theme */
+    --background: 222 47% 4%;
+    --foreground: 210 40% 98%;
+    
+    --card: 222 43% 6%;
+    --card-foreground: 210 40% 98%;
+    
+    --popover: 222 43% 6%;
+    --popover-foreground: 210 40% 98%;
+    
+    --primary: 263 70% 60%;
+    --primary-foreground: 0 0% 100%;
+    
+    --secondary: 222 43% 8%;
+    --secondary-foreground: 210 40% 98%;
+    
+    --muted: 222 43% 8%;
+    --muted-foreground: 215 20% 65%;
+    
+    --accent: 194 83% 55%;
+    --accent-foreground: 222 47% 4%;
+    
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 210 40% 98%;
+    
+    --border: 222 43% 12%;
+    --input: 222 43% 12%;
+    --ring: 263 70% 60%;
+    
+    --radius: 0.75rem;
+    
+    /* Neon Colors */
+    --neon-purple: 263 70% 60%;
+    --neon-blue: 194 83% 55%;
+    --neon-pink: 316 73% 69%;
+    
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--neon-purple)), hsl(var(--neon-blue)));
+    --gradient-card: linear-gradient(135deg, hsl(var(--card)), hsl(222 43% 8%));
+    --gradient-hero: linear-gradient(135deg, hsl(var(--background)), hsl(222 43% 6%));
+    
+    /* Shadows */
+    --shadow-neon: 0 0 30px hsl(var(--neon-purple) / 0.3);
+    --shadow-card: 0 10px 30px -10px hsl(222 47% 2% / 0.8);
+    --shadow-glow: 0 0 40px hsl(var(--neon-blue) / 0.2);
+    
+    /* Animation */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground font-space;
+    font-feature-settings: "liga" 1, "kern" 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-background;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-primary/30 rounded-full;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-primary/50;
+  }
+}

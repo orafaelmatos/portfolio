@@ -13,8 +13,28 @@ const projects = [
     github: "https://github.com/orafaelmatos/url-shortener",
     deploy: "https://url-shortener-byxq.onrender.com/docs",
   },
-  {
+    {
     id: 2,
+    title: "Mini Crontab",
+    description:
+      "Uma plataforma leve de agendamento e execução de tarefas que combina a simplicidade do crontab com a escalabilidade de uma arquitetura assíncrona moderna baseada em filas.",
+    image: "images/async-cron.jpg",
+    tech: ["Python", "FastAPI", "RabbitMQ", "MongoDB", "Docker", "Croniter", "Httpx"],
+    github: "https://github.com/orafaelmatos/async-cron",
+    deploy: "https://url-shortener-byxq.onrender.com/docs",
+  },
+      {
+    id: 3,
+    title: "Backend plataforma de educação",
+    description:
+      "Um backend Django completo para uma plataforma educacional que permite aos professores gerenciar cursos, materiais e aulas ao vivo. O projeto segue os princípios SOLID e as melhores práticas de desenvolvimento modernas.",
+    image: "images/education-plataform.jpg",
+    tech: ["Python", "Django", "DRF", "JWT","PostgreSQL", "Docker", "Swagger/OpenAPI"],
+    github: "https://github.com/orafaelmatos/learn-hub",
+    deploy: "https://url-shortener-byxq.onrender.com/docs",
+  },
+  {
+    id: 4,
     title: "Conversor de Moedas",
     description:
       "Conversor de moedas com API de cotação de moedas, permitindo que os usuários visualizem as cotações em tempo real e realizem conversões entre diferentes moedas.",
@@ -24,16 +44,16 @@ const projects = [
     deploy: "https://coinverter-rafael-matos-projects.vercel.app/",
   },
   {
-    id: 3,
-    title: "Sistema de CRM",
-    description: "Um projeto dedicado a transformar conhecimento em soluções para o mundo real.",
+    id: 5,
+    title: "Analisador de Logs",
+    description: "Projeto para gerenciamento de logs: os usuários podem adicionar logs, visualizar o histórico, ver métricas e filtrar por serviço.",
     image: "images/crm-system.jpg",
-    tech: ["Python", "Django", "SQLite", "Bootstrap"],
-    github: "https://github.com/orafaelmatos/crm-system",
+    tech: ["Python", "FastAPI", "Celery", "SQLAlchemy", "MongoDB", "React", "Typescript", "Shadcn-ui", "Docker"],
+    github: "https://github.com/orafaelmatos/logs-analytics",
     deploy: "https://django-crm-f9tm.onrender.com",
   },
   {
-    id: 4,
+    id: 6,
     title: "Gerenciador de Estoque",
     description: "Uma forma de externalizar e aplicar meus conhecimentos por meio da implementação prática.",
     image: "images/inventory-management.jpg",
@@ -116,7 +136,7 @@ const Projects = () => {
                     size="sm"
                     className="flex-1 border-accent/30 hover:border-accent hover:bg-accent/10 hover:text-accent"
                   >
-                    <a
+                    {/* <a
                       href={project.deploy}
                       target="_blank"
                       rel="noopener noreferrer"
@@ -124,7 +144,7 @@ const Projects = () => {
                     >
                       <ExternalLink className="h-4 w-4" />
                       Demo
-                    </a>
+                    </a> */}
                   </Button>
                 </div>
               </CardContent>

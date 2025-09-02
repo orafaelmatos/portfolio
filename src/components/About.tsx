@@ -1,47 +1,38 @@
 import { Card, CardContent } from "@/components/ui/card";
-import { 
-  Code2, 
-  Database, 
-  Globe, 
-  Smartphone, 
-  Cloud, 
-  GitBranch,
-  Palette,
-  Zap
-} from "lucide-react";
+import { Code2, Database, Globe, Smartphone, Cloud, GitBranch, Palette, Zap } from "lucide-react";
 
 const skills = [
   {
-    category: "Frontend",
-    icon: <Globe className="h-8 w-8" />,
-    techs: ["React", "TypeScript", "Javascript", "Redux"]
+    category: "Backend",
+    icon: <Code2 className="h-8 w-8" />,
+    techs: ["Python", "Java", "Node.js", "Django", "FastAPI", "Spring Boot", "Express"],
   },
   {
-    category: "Backend", 
-    icon: <Code2 className="h-8 w-8" />,
-    techs: ["Python", "Java", "Node.js", "Django", "Spring Boot", "Express", "FastAPI"]
+    category: "Frontend",
+    icon: <Globe className="h-8 w-8" />,
+    techs: ["React", "TypeScript", "Javascript", "Redux"],
   },
   {
     category: "Banco de Dados",
     icon: <Database className="h-8 w-8" />,
-    techs: ["PostgreSQL", "MongoDB", "MySQL", "Redis", "Supabase"]
+    techs: ["PostgreSQL", "MongoDB", "MySQL", "Redis", "Supabase"],
   },
   {
     category: "Cloud & DevOps",
     icon: <Cloud className="h-8 w-8" />,
-    techs: ["AWS", "Vercel", "Docker", "GitHub Actions", "Netlify"]
+    techs: ["AWS", "Vercel", "Docker", "GitHub Actions", "Netlify"],
   },
   {
     category: "Ferramentas",
     icon: <GitBranch className="h-8 w-8" />,
-  techs: ["Git", "VS Code", "IntelliJ IDEA", "Figma", "Postman", "Linux", "Jira"]
+    techs: ["Git", "VS Code", "IntelliJ IDEA", "Figma", "Postman", "Linux", "Jira"],
   },
 
   {
     category: "Outros",
     icon: <Zap className="h-8 w-8" />,
-    techs: ["RESTFul API", "Webhook", "WebScraping"]
-  }
+    techs: ["RESTFul API", "Webhook", "WebScraping"],
+  },
 ];
 
 const About = () => {
@@ -61,19 +52,17 @@ const About = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           {/* About Text */}
           <div className="animate-fade-in-left">
-            <h3 className="font-space font-semibold text-2xl md:text-3xl mb-6 text-primary">
-              Minha Jornada
-            </h3>
+            <h3 className="font-space font-semibold text-2xl md:text-3xl mb-6 text-primary">Minha Jornada</h3>
             <div className="space-y-6 text-lg text-muted-foreground leading-relaxed">
               <p>
-                Comecei minha jornada na programação há alguns anos e desde então tenho me dedicado 
-                a aprender e dominar as mais diversas tecnologias do mercado. Minha paixão é 
-                transformar ideias complexas em soluções simples e elegantes.
+                Comecei minha jornada na programação há alguns anos e desde então tenho me dedicado a aprender e dominar
+                as mais diversas tecnologias do mercado. Minha paixão é transformar ideias complexas em soluções simples
+                e elegantes.
               </p>
               <p>
-                Tenho experiência tanto no desenvolvimento backend quanto frontend, sempre buscando 
-                as melhores práticas e mantendo-me atualizado com as tendências tecnológicas. 
-                Acredito que código limpo e boa comunicação são fundamentais para o sucesso de qualquer projeto.
+                Tenho experiência tanto no desenvolvimento backend quanto frontend, sempre buscando as melhores práticas
+                e mantendo-me atualizado com as tendências tecnológicas. Acredito que código limpo e boa comunicação são
+                fundamentais para o sucesso de qualquer projeto.
               </p>
             </div>
           </div>
@@ -85,7 +74,7 @@ const About = () => {
             </h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               {skills.map((skill, index) => (
-                <Card 
+                <Card
                   key={skill.category}
                   className="bg-gradient-card border-border/50 hover:border-primary/50 transition-all duration-300 hover:shadow-card group animate-scale-in"
                   style={{ animationDelay: `${index * 0.05}s` }}
@@ -101,7 +90,7 @@ const About = () => {
                     </div>
                     <div className="flex flex-wrap gap-2">
                       {skill.techs.map((tech) => (
-                        <span 
+                        <span
                           key={tech}
                           className="px-2 py-1 text-xs bg-muted/50 text-muted-foreground rounded border border-border/50 hover:border-accent/50 hover:text-accent transition-all duration-300"
                         >

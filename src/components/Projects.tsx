@@ -1,6 +1,7 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { ExternalLink, Github } from "lucide-react";
+import autooperaLogo from "@/assets/autoopera-logo.jpeg";
 
 const projects = [
   {
@@ -8,7 +9,7 @@ const projects = [
     title: "AutoOpera - Barber Management",
     description:
       "Comprehensive online scheduling and management platform for barbershops. Features an intuitive booking system for clients and real-time financial/calendar management for barbers.",
-    image: "src/assets/autoopera-logo.jpeg",
+    image: autooperaLogo,
     tech: ["React", "TypeScript", "Tailwind", "Python", "FastAPI", "PostgreSQL"],
     github: "https://github.com/orafaelmatos",
     deploy: "https://autoopera.com.br",

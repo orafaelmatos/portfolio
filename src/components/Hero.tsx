@@ -42,7 +42,7 @@ const Hero = () => {
                 size="lg"
                 className="h-16 px-10 bg-primary hover:bg-primary/90 text-primary-foreground shadow-2xl transition-all duration-300 transform hover:-translate-y-1 rounded-none font-bold text-lg uppercase tracking-widest"
               >
-                <a href="/Resume.pdf" download>
+                <a href="/Curriculo.pdf" download="Rafael_Matos_Resume.pdf">
                   <Download className="mr-3 h-5 w-5" />
                   Download Resume
                 </a>

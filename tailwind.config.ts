@@ -1,4 +1,5 @@
 import type { Config } from "tailwindcss";
+import tailwindcssAnimate from "tailwindcss-animate";
 
 export default {
 	darkMode: ["class"],
@@ -14,7 +15,7 @@ export default {
 			center: true,
 			padding: '2rem',
 			screens: {
-				'2xl': '1400px'
+				'2xl': '1440px'
 			}
 		},
 		extend: {
@@ -64,13 +65,15 @@ export default {
 				'gradient-hero': 'var(--gradient-hero)'
 			},
 			boxShadow: {
-				'neon': 'var(--shadow-neon)',
-				'card': 'var(--shadow-card)',
-				'glow': 'var(--shadow-glow)'
+				card: 'var(--shadow-card)',
+				glow: 'var(--shadow-glow)',
+				panel: 'var(--shadow-panel)'
 			},
 			fontFamily: {
-				'space': ['Space Grotesk', 'sans-serif'],
-				'mono': ['JetBrains Mono', 'monospace']
+				sans: ['Inter', 'sans-serif'],
+				display: ['"IBM Plex Sans"', 'Inter', 'sans-serif'],
+				space: ['"IBM Plex Sans"', 'Inter', 'sans-serif'],
+				mono: ['"JetBrains Mono"', 'monospace']
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
@@ -98,13 +101,17 @@ export default {
 					'0%': { opacity: '0', transform: 'scale(0.95)' },
 					'100%': { opacity: '1', transform: 'scale(1)' }
 				},
-				'glow': {
-					'0%, 100%': { boxShadow: '0 0 20px hsl(var(--neon-purple) / 0.3)' },
-					'50%': { boxShadow: '0 0 40px hsl(var(--neon-purple) / 0.5)' }
+				float: {
+					'0%, 100%': { transform: 'translate3d(0, 0, 0)' },
+					'50%': { transform: 'translate3d(0, -12px, 0)' }
 				},
-				'float': {
-					'0%, 100%': { transform: 'translateY(0px)' },
-					'50%': { transform: 'translateY(-10px)' }
+				drift: {
+					'0%, 100%': { transform: 'translate3d(0, 0, 0) scale(1)' },
+					'50%': { transform: 'translate3d(14px, -10px, 0) scale(1.05)' }
+				},
+				'pulse-soft': {
+					'0%, 100%': { opacity: '0.35' },
+					'50%': { opacity: '0.7' }
 				}
 			},
 			animation: {
@@ -113,10 +120,11 @@ export default {
 				'fade-in': 'fade-in 0.6s ease-out',
 				'fade-in-left': 'fade-in-left 0.6s ease-out',
 				'scale-in': 'scale-in 0.3s ease-out',
-				'glow': 'glow 2s ease-in-out infinite',
-				'float': 'float 3s ease-in-out infinite'
+				float: 'float 12s ease-in-out infinite',
+				drift: 'drift 18s ease-in-out infinite',
+				'pulse-soft': 'pulse-soft 4s ease-in-out infinite'
 			}
 		}
 	},
-	plugins: [require("tailwindcss-animate")],
+	plugins: [tailwindcssAnimate],
 } satisfies Config;

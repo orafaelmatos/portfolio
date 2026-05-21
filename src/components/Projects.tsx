@@ -16,17 +16,6 @@ const projects = [
     featured: true
   },
   {
-    id: 1,
-    title: "Nexus-PDM",
-    description:
-      "Enterprise-grade PDM (Product Data Management) solution developed as a SolidWorks plugin. It streamlines CAD workflows, manages version control, and integrates engineering data directly within the 3D design environment using C# and .NET.",
-    image: "https://images.unsplash.com/photo-1581094794329-c8112a89af12?q=80&w=2070&auto=format&fit=crop",
-    tech: ["C#", ".NET", "SolidWorks API", "WPF", "SQL Server", "Entity Framework"],
-    github: "https://github.com/orafaelmatos/Nexus-PDM",
-    deploy: "https://github.com/orafaelmatos/Nexus-PDM",
-    featured: true
-  },
-  {
     id: 2,
     title: "URL Shortener & Analytics",
     description:
@@ -122,7 +111,7 @@ const Projects = () => {
                     <img
                       src={project.image}
                       alt={project.title}
-                      className="w-full h-full object-cover transition-transform duration-[2000ms] group-hover:scale-105"
+                      className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
                     />
                     <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-background to-transparent z-10 opacity-60" />
                   </div>

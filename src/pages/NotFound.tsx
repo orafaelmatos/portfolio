@@ -12,12 +12,20 @@ const NotFound = () => {
   }, [location.pathname]);
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4">404</h1>
-        <p className="text-xl text-gray-600 mb-4">Oops! Page not found</p>
-        <a href="/" className="text-blue-500 hover:text-blue-700 underline">
-          Return to Home
+    <div className="flex min-h-screen items-center justify-center bg-background px-6 text-foreground">
+      <div className="surface-hero max-w-xl rounded-[2rem] p-10 text-center">
+        <p className="eyebrow">404</p>
+        <h1 className="mt-5 font-display text-5xl font-semibold tracking-[-0.05em] md:text-6xl">
+          Page not found
+        </h1>
+        <p className="mt-5 text-lg leading-8 text-muted-foreground">
+          The route you tried to open does not exist. Use the main portfolio page to get back to the current build.
+        </p>
+        <a
+          href="/"
+          className="mt-8 inline-flex rounded-full border border-primary/40 bg-primary px-6 py-3 text-sm font-medium text-primary-foreground shadow-glow transition-colors hover:bg-primary/90"
+        >
+          Return Home
         </a>
       </div>
     </div>
